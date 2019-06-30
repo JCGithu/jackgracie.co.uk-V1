@@ -165,8 +165,6 @@ input, select, textarea {
 	top:25vh;
 }
 
-
-
 .video-container iframe{
 	position: absolute;
     top: 0;
@@ -276,7 +274,6 @@ input, select, textarea {
 		 url('../webfonts/Lato-Regular.ttf') format('truetype');
   
   }
-
 
 
 /* Basic */
