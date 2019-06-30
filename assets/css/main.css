@@ -191,7 +191,7 @@ body {
 
 @font-face {
   font-family: 'DM Serif Display';
-  font-display: auto;
+  font-display: swap;
   src: local('DM Serif Display Regular'), local('DMSerifDisplay-Regular'),  
 		 url('../fonts/dm-serif-display-v1-latin-regular.woff2') format('woff2'), 
   
@@ -202,7 +202,7 @@ body {
 
 @font-face {
   font-family: 'Lato';
-  font-display: auto;
+  font-display: swap;
   src: local('Lato Regular'), local('Lato-Regular'),  
 		 url('../fonts/lato-v15-latin-regular.woff2') format('woff2'), 
   
