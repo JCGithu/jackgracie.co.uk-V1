@@ -144,7 +144,7 @@ input, select, textarea {
 }
 
 .thetitle{
-	padding: 30vh 0 0 10vw;	
+	padding: 29vh 0 0 10vw;	
 	width:35%;
 	float:left;
 
@@ -177,7 +177,39 @@ input, select, textarea {
     width: 100%;
 }
 
+.video-container img {
+	bottom: 0;
+	display: block;
+	left: 0;
+	margin: auto;
+	max-width: 100%;
+	width: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	border: none;
+	height: auto;
+	cursor: pointer;
+	-webkit-transition: .4s all;
+	-moz-transition: .4s all;
+	transition: .4s all;
+}
 
+.video-container img:hover {
+	-webkit-filter: brightness(75%);
+}
+
+.video-container .play {
+	height: 72px;
+	width: 72px;
+	left: 50%;
+	top: 50%;
+	margin-left: -36px;
+	margin-top: -36px;
+	position: absolute;
+	background: url("//i.imgur.com/TxzC70f.png") no-repeat;
+	cursor: pointer;
+}
 
 @media screen and (max-width: 980px) {
 	.titlesection{

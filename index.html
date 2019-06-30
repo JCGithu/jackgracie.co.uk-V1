@@ -58,7 +58,6 @@
 						
 						<div class="titlesection">
 							<div class="thetitle">
-								<!--<h1>J<u>ack Gracie</u></h1>-->
 								<img src="dist/JACK.svg" class="name"/>
 								<p> 
 									Design / Video / Motion Graphics.
@@ -71,11 +70,44 @@
 								</div>
 							</div>
 						
-							<div class="video-container">
+							<div class="video-container" data-id="iTfbU_WnfVE"></div>
 								
-									<iframe width="640" height="360" src="https://www.youtube.com/embed/iTfbU_WnfVE" frameborder="0" allowfullscreen></iframe>
+							<script>
+
+								/* Light YouTube Embeds by @labnol */
+								/* Web: http://labnol.org/?p=27941 */
+							
+								document.addEventListener("DOMContentLoaded",
+									function() {
+										var div, n,
+											v = document.getElementsByClassName("video-container");
+										for (n = 0; n < v.length; n++) {
+											div = document.createElement("div");
+											div.setAttribute("data-id", v[n].dataset.id);
+											div.innerHTML = labnolThumb(v[n].dataset.id);
+											div.onclick = labnolIframe;
+											v[n].appendChild(div);
+										}
+									});
+							
+								function labnolThumb(id) {
+									var thumb = '<img src="https://i.ytimg.com/vi/ID/maxresdefault.jpg">',
+										play = '<div class="play"></div>';
+									return thumb.replace("ID", id) + play;
+								}
+							
+								function labnolIframe() {
+									var iframe = document.createElement("iframe");
+									var embed = "https://www.youtube.com/embed/ID?autoplay=1";
+									iframe.setAttribute("src", embed.replace("ID", this.dataset.id));
+									iframe.setAttribute("frameborder", "0");
+									iframe.setAttribute("allowfullscreen", "1");
+									this.parentNode.replaceChild(iframe, this);
+								}
+							
+							</script>
 								
-							</div>
+							
 
 						</div>
 					</section>
@@ -148,7 +180,7 @@
 					<section id="two" class="wrapper style2 spotlights">
 						<section>
 								<div class="image">
-										<video autoplay loop alt="" data-position="center center">
+										<video playinline autoplay muted loop alt="" data-position="center center">
 											<source src="dist/reelopinions.webm" type="video/webm">
 								</div>
 							<div class="content">
@@ -163,7 +195,7 @@
 						</section>
 						<section>
 							<div class="image">
-									<video autoplay loop alt="" data-position="top center">
+									<video playinline autoplay muted loop alt="" data-position="top center">
 										<source src="dist/playlist.webm" type="video/webm">
 								</div>
 							<div class="content">
@@ -178,7 +210,7 @@
 						</section>
 						<section>
 							<div class="image">
-								<video autoplay loop alt="" data-position="25% 25%">
+								<video playinline autoplay muted loop alt="" data-position="25% 25%">
 									<source src="dist/Document.webm" type="video/webm">
 							</div>
 							<div class="content">
@@ -197,7 +229,7 @@
 					<section id="three" class="wrapper style1 fade-up">
 						<div class="contact">
 							<h2>Contact</h2>
-							<p>Get in touch. Rates vary dependant on projects.!</p>
+							<p>Get in touch. Rates vary dependant on projects.</p>
 							<div class="inner">
 								
 								<section>
