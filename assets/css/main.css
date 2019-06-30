@@ -42,13 +42,6 @@ body {
   background: #303030;
 }
 
-.photobg {
-  z-index: 0;
-  position: absolute;
-  display: block;
-  image-rendering: crisp-edges;
-}
-
 .name {
   height: 100%;
   width: 100%;
@@ -59,7 +52,7 @@ body {
 .underlay {
   z-index: 1;
   overflow: hidden;
-  right: -50px;
+  right: -5vw;
   bottom: -5vw;
   pointer-events: none;
   position: absolute;
