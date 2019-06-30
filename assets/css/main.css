@@ -193,9 +193,9 @@ body {
   font-family: 'DM Serif Display';
   font-display: swap;
   src: local('DM Serif Display Regular'), local('DMSerifDisplay-Regular'),  
-		 url('../fonts/dm-serif-display-v1-latin-regular.woff2') format('woff2'), 
+		 url('../webfonts/dm-serif-display-v1-latin-regular.woff2') format('woff2'), 
   
-		 url('../fonts/dm-serif-display-v1-latin-regular.woff') format('woff'), 
+		 url('../webfonts/dm-serif-display-v1-latin-regular.woff') format('woff'), 
 
 		 url('../webfonts/DMSerifDisplay-Regular.ttf') format ('truetype');
 }
@@ -204,9 +204,9 @@ body {
   font-family: 'Lato';
   font-display: swap;
   src: local('Lato Regular'), local('Lato-Regular'),  
-		 url('../fonts/lato-v15-latin-regular.woff2') format('woff2'), 
+		 url('../webfonts/lato-v15-latin-regular.woff2') format('woff2'), 
   
-		 url('../fonts/lato-v15-latin-regular.woff') format('woff'), 
+		 url('../webfonts/lato-v15-latin-regular.woff') format('woff'), 
 
 		 url('../webfonts/Lato-Regular.ttf') format('truetype');
 }
