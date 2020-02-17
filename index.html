@@ -12,223 +12,81 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="shortcut icon" href="./dist/favicon.ico" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<script defer src="assets/js/fetch.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.5/lottie.min.js"></script>
 		<script src="assets/js/anime.min.js"></script>
 	</head>
 	
-
-	<body class="is-preload">
-
-			<div class ="overlay" id="jackg">
-
-			<script src="assets/js/welcome.js"></script>
+	<body class="mainpage">
+		<div class= under>
+			<div class="underlay" id="jbganimation">
+					<script src="assets/js/bganimate.js"></script>
 			</div>
+		</div>
 		
 		<!-- Wrapper -->
-			
+
 			<div id="wrapper">
-					<div class= under>
-						<div class="underlay" id="jbganimation">
-								<script src="assets/js/bganimate.js"></script>
-						</div>
-					</div>
 
 				<!-- Intro -->
-					<section id="intro" class="wrapper style1 fullscreen fade-up">
-
-						
-						<div class="titlesection">
-							<div class="thetitle">
-								<img src="dist/JACK.svg" class="name"/>
-								<p> 
-									Design / Video / Motion Graphics.
-									Available for hire.
-								</p>
-								<div>
-								<ul class="actions">
-									<li><a href="#one" class="button scrolly">Scroll Down!</a></li>
-								</ul>
-								</div>
-							</div>
-						
-							<div class="video-container" data-id="5T5K7Yu0BLs"></div>
-								
-							<script>
-
+				<section id="intro" class="wrapper style1 fullscreen fade-up">
+					<div class="titlesection">
+						<div class="thetitle">
+							<img src="dist/JACK.svg" class="name"/>
+							<p> 
+								<a href="https://www.behance.net/gallery/85088131/Jack-Gracie-Graphic-Design-Portfolio">Design </a>
+								/
+								<a href="videoedit.html"> Video </a>
+								/ 
+								<a href="https://www.behance.net/gallery/69089363/Metrocouk-Motion-Graphics">Motion Graphics </a>
+								<br><b style="font-size: medium; font-weight: normal;">contact@jackgracie.co.uk</b>
+							<br>
+								<i><a style="text-decoration:none" href="https://twitter.com/JackCGracie" class="fab fa-twitter"></a></i> 
+								<i><a style="text-decoration:none" href="https://www.youtube.com/channel/UCgAoRZj4dO8CXcT3O_WOXnQ?view_as=subscriber" class="fab fa-youtube"></a></i> 
+								<i><a style="text-decoration:none" href="https://www.instagram.com/jack.c.gracie/" class="fab fa-instagram"></a></i> 
+								<i><a style="text-decoration:none" href="https://www.linkedin.com/in/jack-gracie-b177b791/" class="fab fa-linkedin-in"></a></i>
+							</p>
+						</div>
+						<div class="video-container" data-id="5T5K7Yu0BLs"></div>
+						<script>
 								/* Light YouTube Embeds by @labnol */
-								/* Web: http://labnol.org/?p=27941 */
-							
-								document.addEventListener("DOMContentLoaded",
-									function() {
-										var div, n,
-											v = document.getElementsByClassName("video-container");
-										for (n = 0; n < v.length; n++) {
-											div = document.createElement("div");
-											div.setAttribute("data-id", v[n].dataset.id);
-											div.innerHTML = labnolThumb(v[n].dataset.id);
-											div.onclick = labnolIframe;
-											v[n].appendChild(div);
-										}
-									});
-							
-								function labnolThumb(id) {
-									var thumb = '<img src="https://i.ytimg.com/vi/ID/maxresdefault.jpg">',
-										play = '<div class="play"></div>';
-									return thumb.replace("ID", id) + play;
-								}
-							
-								function labnolIframe() {
-									var iframe = document.createElement("iframe");
-									var embed = "https://www.youtube.com/embed/ID?autoplay=1";
-									iframe.setAttribute("src", embed.replace("ID", this.dataset.id));
-									iframe.setAttribute("frameborder", "0");
-									iframe.setAttribute("allowfullscreen", "1");
-									this.parentNode.replaceChild(iframe, this);
-								}
-							
-							</script>
-								
-							
-
-						</div>
-					</section>
-					
-				
-					
-				<!-- One -->
-					<section id="one" class="wrapper style3 fade-up">
-						<div class="inner">
-							<h2 class="p2">Skills & Programs</h2>
-							<p class="p2">Here's a quick list of programs and tools I can use. For more info on anything feel free to get in touch via the contact information below.</p>
-							<div class="features">
-								<section>
-									<span class="icon solid major fa-code"></span>
-									<h3>Web Design</h3>
-									<p>For an example just refresh this page! No site building services used, just HTML, CSS, and JS. Here's some of the more specific tools used to make this site:</p>
-									<li>After Effects</li>
-									<li>Anime.js</li>
-									<li>Lottie.js</li>
-									<li>Bodymovin</li></p>
-								</section>
-								
-								<section>
-									<span class="icon solid major fa-video"></span>
-									<h3>Video</h3>
-									<p>Mainly editing and colour grade software, with some basic 3D knowledge</p>
-									<li>Adobe Suite (Premiere, AE)</li>
-									<li>Avid Media Composer</li>
-									<li>Davinci Resolve (Edit and Colour)</li>
-									<li>Blender</li>
-									<li>Mocha</li>
-									<p></p>
-								</section>
-								<section>
-									<span class="icon solid major fa-wave-square"></span>
-									<h3>Audio</h3>
-									<p>As it comes in hand with video work I've picked up a number of audio tools, ranging from basic music composition to audio repair and mixing.</p>
-									<li>Adobe Audition (Editing, Mixing, Repair)</li>
-									<li>iZotope RX7</li>
-									<li>Ableton</li>
-									<p></p>
-									
-								</section>
-								<section>
-									<span class="icon solid major fa-desktop"></span>
-									<h3>Design</h3>
-									<p>Motion and Graphic. Examples can be found in the reel above or sections below. I mainly use:</p>
-									<li>Photoshop</li>
-									<li>Illustrator</li>
-									<li>After Effects <em>(I use this a lot if you can't tell)</em></li>
-									<p></p>
-								</section>
-							</div>
-							
-						</div>
-					</section>
-
-				<!-- Two -->
-					<section id="two" class="wrapper style2 spotlights">
-						<section>
-								<div class="image">
-										<video playinline autoplay muted loop alt="" data-position="center center">
-											<source src="dist/reelopinions.webm" type="video/webm">
-								</div>
-							<div class="content">
-								<div class="inner">
-									<h2>Motion Graphics</h2>
-									<p>All the motion graphics shown in my reel and work are created by me. For a closer look you can check out my Behance profile. </p>
-									<ul class="actions">
-										<li><a href="https://www.behance.net/gallery/69089363/Metrocouk-Motion-Graphics" class="button" style="color: black">Portfolio</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<div class="image">
-									<video playinline autoplay muted loop alt="" data-position="top center">
-										<source src="dist/playlist.webm" type="video/webm">
-								</div>
-							<div class="content">
-								<div class="inner">
-									<h2>Video Editing</h2>
-									<p>Long form, short form, and all else inbetween. Click here to see some projects I've worked on.</p>
-									<ul class="actions">
-										<li><a href="/videoedit" class="button" style="color: black">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<div class="image">
-								<video playinline autoplay muted loop alt="" data-position="25% 25%">
-									<source src="dist/Document.webm" type="video/webm">
-							</div>
-							<div class="content">
-								<div class="inner">
-									<h4>Want a more concise version of all this?</h4>
-									<p>This is all covered in my CV, which you can find below!</p>
-									<ul class="actions">
-										<li><a href="dist/JGCV2019.pdf" target="_blank" class="button" style="color: black">Open CV</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-					</section>
-
-				<!-- Three -->
-					<section id="three" class="wrapper style1 fade-up">
-						<div class="contact">
-							<h2>Contact</h2>
-							<p>Get in touch. Rates vary dependant on projects.</p>
-							<div class="inner">
-								
-								<section>
-									<ul class="contact">
-										<li>
-											<h3>Email</h3>
-											<a href="mailto:contact@jackgracie.co.uk">contact@jackgracie.co.uk</a>
-										</li>
-										<li>
-											<h3>Social</h3>
-											<ul class="icons">
-												<li><a href="https://twitter.com/JackCGracie" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-												<li><a href="https://www.youtube.com/channel/UCgAoRZj4dO8CXcT3O_WOXnQ?view_as=subscriber" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
-												<li><a href="https://www.instagram.com/jack.c.gracie/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-												<li><a href="https://www.linkedin.com/in/jack-gracie-b177b791/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-											</ul>
-										</li>
-									</ul>
-								</section>
-							</div>
-						</div>
-					</section>
-
+							/* Web: http://labnol.org/?p=27941 */
+						
+							document.addEventListener("DOMContentLoaded",
+								function() {
+									var div, n,
+										v = document.getElementsByClassName("video-container");
+									for (n = 0; n < v.length; n++) {
+										div = document.createElement("div");
+										div.setAttribute("data-id", v[n].dataset.id);
+										div.innerHTML = labnolThumb(v[n].dataset.id);
+										div.onclick = labnolIframe;
+										v[n].appendChild(div);
+									}
+								});
+						
+							function labnolThumb(id) {
+								var thumb = '<img src="https://i.ytimg.com/vi/ID/maxresdefault.jpg">',
+									play = '<div class="play"></div>';
+								return thumb.replace("ID", id) + play;
+							}
+						
+							function labnolIframe() {
+								var iframe = document.createElement("iframe");
+								var embed = "https://www.youtube.com/embed/ID?autoplay=1";
+								iframe.setAttribute("src", embed.replace("ID", this.dataset.id));
+								iframe.setAttribute("frameborder", "0");
+								iframe.setAttribute("allowfullscreen", "1");
+								this.parentNode.replaceChild(iframe, this);
+							}
+						</script>
+					</div>
+				</section>
 			</div>
 
 			
-
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
