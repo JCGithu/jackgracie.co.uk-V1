@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="shortcut icon" href="./dist/favicon.ico" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+	<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css"/>
+	<script src="/assets/js/anime.min.js"></script>
+    <title>Video Editing</title>
+</head>
+<body style="background: linear-gradient(to top right, rgb(252,200,177), rgb(255,236,210));">
+    <div class='new-content' id='video_body'>
+		<svg class="hidden">
+			<symbol id="icon-arrow" viewBox="0 0 24 24">
+				<title>arrow</title>
+				<polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 "/>
+			</symbol>
+			<symbol id="icon-cross" viewBox="0 0 24 24">
+				<title>cross</title>
+				<path d="M 5.5,2.5 C 5.372,2.5 5.244,2.549 5.146,2.646 L 2.646,5.146 C 2.451,5.341 2.451,5.659 2.646,5.854 L 8.793,12 2.646,18.15 C 2.451,18.34 2.451,18.66 2.646,18.85 L 5.146,21.35 C 5.341,21.55 5.659,21.55 5.854,21.35 L 12,15.21 18.15,21.35 C 18.24,21.45 18.37,21.5 18.5,21.5 18.63,21.5 18.76,21.45 18.85,21.35 L 21.35,18.85 C 21.55,18.66 21.55,18.34 21.35,18.15 L 15.21,12 21.35,5.854 C 21.55,5.658 21.55,5.342 21.35,5.146 L 18.85,2.646 C 18.66,2.451 18.34,2.451 18.15,2.646 L 12,8.793 5.854,2.646 C 5.756,2.549 5.628,2.5 5.5,2.5 Z"/>
+			</symbol>
+			<symbol id="icon-magnifier" viewBox="0 0 520 520">
+				<title>magnifier</title>
+				<g>
+					<path d="M256,0C114.833,0,0,114.844,0,256s114.833,256,256,256s256-114.844,256-256S397.167,0,256,0z M256,490.667
+						C126.604,490.667,21.333,385.396,21.333,256S126.604,21.333,256,21.333S490.667,126.604,490.667,256S385.396,490.667,256,490.667
+						z"/>
+					<path d="M357.771,247.031l-149.333-96c-3.271-2.135-7.5-2.25-10.875-0.396C194.125,152.51,192,156.094,192,160v192
+						c0,3.906,2.125,7.49,5.563,9.365c1.583,0.865,3.354,1.302,5.104,1.302c2,0,4.021-0.563,5.771-1.698l149.333-96
+						c3.042-1.958,4.896-5.344,4.896-8.969S360.813,248.99,357.771,247.031z M213.333,332.458V179.542L332.271,256L213.333,332.458z"
+						/>
+				</g>
+			</symbol>
+		</svg>
+		<div class="videoContent">
+			<header class="video-header">
+				<div class="video-links">
+					<a class="video-icon video-icon--prev" href="/index.html" title="Homepage"><svg class="icon icon--arrow"><use xlink:href="#icon-arrow"></use></svg></a>
+				</div>
+<!-- 				<h1 class="video-header__title">
+					<span class="line"></span>
+					Video
+				</h1> -->
+			</header>
+		</div>
+		<div class="videoContent">
+			<div class="grid">
+				<div class="grid__item">
+					<div class="video">
+						<div class="video__bg"></div>
+						<img class="video__img" src="./dist/play2.jpg" alt="img 01"/>
+						<h2 class="video__title">Playlist Picks</h2>
+						<h3 class="video__subtitle">Music interview series</h3>
+						<p class="video__description">An interview series that involved guests such as Busted, Peter Andre, Steven Yeun, and Zak Able building music playlists. All episodes were shot, edited, and released within the same day. <br> <br> <b>Roles: </b> Camera, Editor, Graphics, Music</p>
+						<div class="video__price">Client: Metro</div>
+						<div class='video__add' style="background-color: #ce86e4;" data-id='IEPIXCsNbTg'></div>
+					</div>
+				</div>
+				<div class="grid__item">
+					<div class="video">
+						<div class="video__bg"></div>
+						<img class="video__img" src="./dist/viewranger.jpg" alt="img 02"/>
+						<h2 class="video__title" id='viewTitle'>ViewRanger Stories</h2>
+						<h3 class="video__subtitle">Mini-Documentary series</h3>
+						<p class="video__description">A series of 11 mini-documentaries that followed users of the GPS tracking app ViewRanger. <br> <br> After the series I also edited a trailer for the app using the footage collected from the shoots alongside additional graphics.<br> <br> <b>Roles: </b> Camera, Editor, Graphics</p>
+						<div class="video__price">Client: ViewRanger</div>
+						<div class='video__add' style="background-color: #138a40; font-size: 3em;" data-id='Cjf0rb3DTlc'></div>
+					</div>
+				</div>
+				<div class="grid__item">
+					<div class="video">
+						<div class="video__bg"></div>
+						<img class="video__img" src="./dist/deep.jpg" alt="img 03"/>
+						<h2 class="video__title">Deepfakes</h2>
+						<h3 class="video__subtitle">Journalism Feature</h3>
+						<p class="video__description">A look into Deepfake technology.The piece includes a simple explanation of nerual networks, their applications, and how this has manifested into Deep Fake videos. <br> <br> <b>Roles: </b> Researcher, Camera, Editor, Graphics</p>
+						<div class="video__price">Client: Metro</div>
+						<div class='video__add' style="background-color: #4472CA;" data-id="TFy594yTAns"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src='/assets/js/videopage.js'></script>
+	</body>
+</html>

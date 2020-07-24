@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="shortcut icon" href="./dist/favicon.ico" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+	<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css"/>
+	<script src="/assets/js/anime.min.js"></script>
+    <title>Motion Grpahics</title>
+</head>
+<body style="background: linear-gradient(to top right, #FFAC99, #FF769A);">
+    <div class='new-content' id='mo_body'>
+		<svg class="hidden">
+			<symbol id="icon-arrow" viewBox="0 0 24 24">
+				<title>arrow</title>
+				<polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 "/>
+			</symbol>
+			<symbol id="icon-cross" viewBox="0 0 24 24">
+				<title>cross</title>
+				<path d="M 5.5,2.5 C 5.372,2.5 5.244,2.549 5.146,2.646 L 2.646,5.146 C 2.451,5.341 2.451,5.659 2.646,5.854 L 8.793,12 2.646,18.15 C 2.451,18.34 2.451,18.66 2.646,18.85 L 5.146,21.35 C 5.341,21.55 5.659,21.55 5.854,21.35 L 12,15.21 18.15,21.35 C 18.24,21.45 18.37,21.5 18.5,21.5 18.63,21.5 18.76,21.45 18.85,21.35 L 21.35,18.85 C 21.55,18.66 21.55,18.34 21.35,18.15 L 15.21,12 21.35,5.854 C 21.55,5.658 21.55,5.342 21.35,5.146 L 18.85,2.646 C 18.66,2.451 18.34,2.451 18.15,2.646 L 12,8.793 5.854,2.646 C 5.756,2.549 5.628,2.5 5.5,2.5 Z"/>
+			</symbol>
+			<symbol id="icon-magnifier" viewBox="0 0 520 520">
+				<title>magnifier</title>
+				<g>
+					<path d="M256,0C114.833,0,0,114.844,0,256s114.833,256,256,256s256-114.844,256-256S397.167,0,256,0z M256,490.667
+						C126.604,490.667,21.333,385.396,21.333,256S126.604,21.333,256,21.333S490.667,126.604,490.667,256S385.396,490.667,256,490.667
+						z"/>
+					<path d="M357.771,247.031l-149.333-96c-3.271-2.135-7.5-2.25-10.875-0.396C194.125,152.51,192,156.094,192,160v192
+						c0,3.906,2.125,7.49,5.563,9.365c1.583,0.865,3.354,1.302,5.104,1.302c2,0,4.021-0.563,5.771-1.698l149.333-96
+						c3.042-1.958,4.896-5.344,4.896-8.969S360.813,248.99,357.771,247.031z M213.333,332.458V179.542L332.271,256L213.333,332.458z"
+						/>
+				</g>
+			</symbol>
+		</svg>
+		<div class="moContent">
+			<header class="mo-header">
+				<div class="mo-links">
+					<a class="mo-icon mo-icon--prev" href="/index.html" title="Homepage"><svg class="icon icon--arrow"><use xlink:href="#icon-arrow"></use></svg></a>
+				</div>
+				<div class="moReel">
+					<div class='video-player grow' id='homeVideo' data-id="ak7QmAedl2k"></div>
+				</div>
+			</header>
+		</div>
+		<div class="moContent">
+			<div class="grid">
+				<div class="grid__item">
+					<div class="mo">
+						<div class="mo__bg"></div>
+						<video class="mo__img" src="./dist/head4.webm" data-id="5T5K7Yu0BLs" autoplay loop alt="img 01"></video>
+						<h2 class="mo__title">Headspace</h2>
+						<h3 class="mo__subtitle">Guided Meditations</h3>
+						<p class="mo__description">
+							A series of looping animations to play alongside guided meditations.
+							Each of the 4 final scenarios were completed between 1-2 working days.
+							A compliation can be seen at the beginning of my reel.<br> <br>
+							Here's a few concept sketches for each week. <br> <br>
+							<a href='./dist/Week 2 Sketch.jpg'  target="_blank">
+								<img id="extra_img" src="./dist/Week 2 Sketch.jpg">
+							</a>
+							<a href='./dist/Week 3 Sketch.jpg'  target="_blank">
+								<img id="extra_img" src="./dist/Week 3 Sketch.jpg">
+							</a>
+						</p> 
+						<div class="mo__price">Client: Metro / Headspace</div>
+						<div class='mo__add' style="background-color: #97A3E3;" data-id='IEPIXCsNbTg'></div>
+					</div>
+				</div>
+				<div class="grid__item">
+					<div class="mo">
+						<div class="mo__bg"></div>
+						<video class="mo__img" src="./dist/OddJob.webm" autoplay loop alt="img 02"></video>
+						<h2 class="mo__title" id='viewTitle'>My Odd Job</h2>
+						<h3 class="mo__subtitle">Social Media Promo</h3>
+						<p class="mo__description">
+							An Instagram Stories stinger to advertise Metro's series on weird workplaces. <br> <br>
+							<b>Tools: </b> After Effects <br> <br>
+							<a href='./dist/oddjob.jpg'  target="_blank">
+								<img id="extra_img" src="./dist/oddjob.jpg">
+							</a>
+						</p>
+						<div class="mo__price">Client: Metro</div>
+						<div class='mo__add' style="background-color: #004690; font-size: 3em;" data-id='Cjf0rb3DTlc'></div>
+					</div>
+				</div>
+				<div class="grid__item">
+					<div class="mo">
+						<div class="mo__bg"></div>
+						<video class="mo__img" src="./dist/paper.webm" loop autoplay alt="img 03"></video>
+						<h2 class="mo__title">Scrapped</h2>
+						<h3 class="mo__subtitle">Personal Work</h3>
+						<p class="mo__description">Originally was being developed as an intro to a series, but continued once it was scrapped. <br> <br> The girl's animation is mostly frame-by-frame, reconstructed with additional tweening in After Effects. <br> <br>
+							<a href='./dist/desktop 4K.jpg'  target="_blank">
+								<img id="extra_img" src="./dist/desktop 4K.jpg">
+							</a>
+							<a href='./dist/Girl.webm'  target="_blank">
+								<video id="extra_img" loop autoplay src="./dist/Girl.webm">
+							</a>
+						</p> 
+						<div class="mo__price"></div>
+						<div class='mo__add' style="background-color: #E04E4E;" data-id="TFy594yTAns"></div>
+					</div>
+				</div>
+				<div class="grid__item">
+					<div class="mo">
+						<div class="mo__bg"></div>
+						<video class="mo__img" src="./dist/Frog.webm" loop autoplay alt="img 03"></video>
+						<h2 class="mo__title">Pond Time</h2>
+						<h3 class="mo__subtitle">Personal Work</h3>
+						<p class="mo__description">I originally worked on this to try and get a blend between realistic and cartoonish water.<br> <br> This included experimenting with combining grain and gradients, generating random reactive shapes for the as well as displacement tools for ripples. </p>
+						<div class="mo__price"></div>
+						<div class='mo__add' style="background-color: #138a40;" data-id="TFy594yTAns"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src='/assets/js/mopage.js'></script>
+	</body>
+</html>

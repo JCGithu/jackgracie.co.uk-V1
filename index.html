@@ -1,102 +1,48 @@
 <!DOCTYPE HTML>
-<!--
-	Website by Jack Gracie
-	
-	Adapted from "Hyperspace" by HTML5 UP. More very nice templates over at html5up.net
-	
--->
 <html>
 	<head>
 		<title>Jack Gracie</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="shortcut icon" href="./dist/favicon.ico" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<script defer src="assets/js/fetch.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.5/lottie.min.js"></script>
-		<script src="assets/js/anime.min.js"></script>
+		<link rel="stylesheet" href="/assets/css/main.css" />
+		<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css"/>
+		<script src="/assets/js/lottie.min.js"></script>
+		<script src="/assets/js/anime.min.js"></script>
+		<script src='/assets/js/transitions.js'></script>
 	</head>
 	
-	<body class="mainpage">
-		<div class= under>
-			<div class="underlay" id="jbganimation">
-					<script src="assets/js/bganimate.js"></script>
+	<body id='mainBody'>
+		<div class="background" id="jbganimation">
+			<script src="/assets/js/bganimate.js"></script>
+		</div>
+		<div class='foreground' id="jfganimation">
+			<script src="/assets/js/fganimate.js"></script>
+		</div>
+		<div class='hub'>
+			<div class="grid-container" id='homeContent'>
+				<div class='title'>
+					<h1 id='homeTitle'>
+						<span class="line"></span>
+						<span class='jack'>jack gracie</span>
+					</h1>
+					<p style="line-height: 1.5;"> 
+						<a class="growText" id='video'> Editing </a> / 
+						<a class="growText" id='graphics'>Motion Graphics </a>
+						<a class="growText" id='design'></a><br>
+						<b>contact@jackgracie.co.uk</b><br>
+						<i><a href="https://twitter.com/JackCGracie" class="fab fa-twitter"></a></i> 
+						<i><a href="https://www.youtube.com/channel/UCgAoRZj4dO8CXcT3O_WOXnQ?view_as=subscriber" class="fab fa-youtube"></a></i> 
+						<i><a href="https://www.instagram.com/jack.c.gracie/" class="fab fa-instagram"></a></i> 
+						<i><a href="https://www.linkedin.com/in/jack-gracie-b177b791/" class="fab fa-linkedin-in"></a></i>
+					</p>
+					<script src='/assets/js/animations.js'></script>
+				</div>
+				<div class="homeVideo">
+					<div class='video-player grow' id='homeVideo' data-id="5T5K7Yu0BLs"></div>
+					<script src='/assets/js/youtube.js'></script>
+				</div>
 			</div>
 		</div>
-		
-		<!-- Wrapper -->
-
-			<div id="wrapper">
-
-				<!-- Intro -->
-				<section id="intro" class="wrapper style1 fullscreen fade-up">
-					<div class="titlesection">
-						<div class="thetitle">
-							<img src="dist/JACK.svg" class="name"/>
-							<p style="line-height: 1.5;"> 
-								<a href="https://www.behance.net/gallery/85088131/Jack-Gracie-Graphic-Design-Portfolio">Design </a>
-								/
-								<a href="videoedit"> Video </a>
-								/ 
-								<a href="motiongraphics">Motion Graphics </a>
-								<br><b style="font-size: medium; font-weight: normal;">contact@jackgracie.co.uk</b>
-							<br>
-								<i><a href="https://twitter.com/JackCGracie" class="fab fa-twitter"></a></i> 
-								<i><a href="https://www.youtube.com/channel/UCgAoRZj4dO8CXcT3O_WOXnQ?view_as=subscriber" class="fab fa-youtube"></a></i> 
-								<i><a href="https://www.instagram.com/jack.c.gracie/" class="fab fa-instagram"></a></i> 
-								<i><a href="https://www.linkedin.com/in/jack-gracie-b177b791/" class="fab fa-linkedin-in"></a></i>
-							</p>
-						</div>
-						<div class="video-container" data-id="5T5K7Yu0BLs"></div>
-						<script>
-								/* Light YouTube Embeds by @labnol */
-							/* Web: http://labnol.org/?p=27941 */
-						
-							document.addEventListener("DOMContentLoaded",
-								function() {
-									var div, n,
-										v = document.getElementsByClassName("video-container");
-									for (n = 0; n < v.length; n++) {
-										div = document.createElement("div");
-										div.setAttribute("data-id", v[n].dataset.id);
-										div.innerHTML = labnolThumb(v[n].dataset.id);
-										div.onclick = labnolIframe;
-										v[n].appendChild(div);
-									}
-								});
-						
-							function labnolThumb(id) {
-								var thumb = '<img src="https://i.ytimg.com/vi/ID/maxresdefault.jpg">',
-									play = '<div class="play"></div>';
-								return thumb.replace("ID", id) + play;
-							}
-						
-							function labnolIframe() {
-								var iframe = document.createElement("iframe");
-								var embed = "https://www.youtube.com/embed/ID?autoplay=1";
-								iframe.setAttribute("src", embed.replace("ID", this.dataset.id));
-								iframe.setAttribute("frameborder", "0");
-								iframe.setAttribute("allowfullscreen", "1");
-								this.parentNode.replaceChild(iframe, this);
-							}
-						</script>
-					</div>
-				</section>
-			</div>
-
-			
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			
-
 	</body>
 </html>

@@ -1,0 +1,49 @@
+#designTitle{
+    font-family: 'DM Serif Display', serif;
+    color: white;
+    font-size: 5.5vw;
+    font-weight: normal;
+    margin: 0;
+    display: flex;
+    @media screen and (max-width:768px) {
+        font-size: 42pt;
+    }
+}
+
+.d_title { 
+    grid-area: d_title;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width:100%;
+    height:50%;
+    background-color: green;
+    #name{
+        top: 50px;
+    }
+    img{
+        width:100%;
+        max-width: 28vw;
+        margin-bottom: -15px;
+    }
+    @media screen and (max-width:768px) {
+        align-items: center;
+        text-align: center;
+        padding-bottom: 5vh;
+    }
+}
+
+.d_intro {
+    grid-area: d_intro;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.d_more {
+    grid-area: d_more;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
