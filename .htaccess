@@ -11,9 +11,3 @@ RewriteCond %{REQUEST_FILENAME}\.html -f
 #Show .html page
 
 RewriteRule ^(.*)$ $1.html [NC,L]
-
-RewriteEngine on
-
-RewriteCond %{REQUEST_FILENAME} /index\.html$
-
-RewriteRule (.*?)(index\.html)?$ http://jackgracie.co.uk$1 [NE,R=301,L]
