@@ -7,10 +7,13 @@
     <link rel="shortcut icon" href="./dist/favicon.ico" />
     <link rel="stylesheet" href="/assets/css/main.css" />
 	<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css"/>
+	<script src='/assets/js/youtube.js'></script>
 	<script src="/assets/js/anime.min.js"></script>
     <title>Motion Grpahics</title>
 </head>
-<body style="background: linear-gradient(to top right, #FFAC99, #FF769A);">
+<body style="display: flex;
+			background: linear-gradient(to top right, #803cff, rgb(47, 35, 49));
+			justify-content: center;">
     <div class='new-content' id='mo_body'>
 		<svg class="hidden">
 			<symbol id="icon-arrow" viewBox="0 0 24 24">
@@ -34,17 +37,17 @@
 				</g>
 			</symbol>
 		</svg>
-		<div class="moContent">
+		<div class="moContent" id="mo_video">
 			<header class="mo-header">
 				<div class="mo-links">
 					<a class="mo-icon mo-icon--prev" href="/" title="Homepage"><svg class="icon icon--arrow"><use xlink:href="#icon-arrow"></use></svg></a>
 				</div>
 				<div class="moReel">
-					<div class='video-player grow' id='homeVideo' data-id="ak7QmAedl2k"></div>
+					<div class='video-player grow' id='homeVideo' data-id="ak7QmAedl2k" style="box-shadow: 0px 0px 0px;"></div>
 				</div>
 			</header>
 		</div>
-		<div class="moContent">
+		<div class="moContent" id="mo_content">
 			<div class="grid">
 				<div class="grid__item">
 					<div class="mo">
@@ -116,7 +119,8 @@
 				</div>
 			</div>
 		</div>
+		<script src='/assets/js/mopage.js'></script>
+		<script src='/assets/js/parallax.js'></script>
 	</div>
-	<script src='/assets/js/mopage.js'></script>
 	</body>
 </html>

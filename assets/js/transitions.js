@@ -145,8 +145,8 @@ function transitionInit (){
                         document.querySelector('body').insertBefore(doc.querySelector('.new-content'), document.querySelector('body .hub'));
                         document.querySelector('.new-content').style.opacity = 0;
                         InitCode();
-                        file = './assets/js/mopage.js';
-                        loadjs(file);
+                        loadjs('./assets/js/mopage.js');
+                        loadjs('./assets/js/parallax.js');
                         anime({
                             targets: '.new-content',
                             opacity: 1,
