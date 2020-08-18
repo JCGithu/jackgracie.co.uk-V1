@@ -1,14 +1,19 @@
 /* Light YouTube Embeds by @labnol */
-var page = 'init';
 if (document.readyState !== 'loading') {
     console.log('Youtube.js logs loading state')
+    makePage();
     InitCode(page);
 } else {
     document.addEventListener("DOMContentLoaded", function() {
-        InitCode(page);
+        makePage().then(page => InitCode(page));
         console.log('Youtube.js logs DOMContentLoaded')
     });
 }
+
+async function makePage(){
+    if (document.title == 'Jack Gracie'){var page = 'init';} else {page = 'mo'};
+    return page;
+};
 
 function InitCode(page){
     var div, n, v = document.getElementsByClassName("video-player");
@@ -25,9 +30,9 @@ function labnolThumb(id, page) {
     console.log ('page recorded is: ', page);
     var thumb = '<img src="https://i.ytimg.com/vi/ID/maxresdefault.jpg" >';
     if (page == 'init'){
-        play = '<video src="./dist/reel.webm" autoplay loop alt="img 01" class="play"></video>';
+        var play = '<video src="./dist/reel.webm" autoplay loop alt="img 01" class="play"></video>';
     } else if (page == 'mo') {
-        play = '<video src="./dist/Motion.webm" autoplay loop alt="img 01" class="playMo"></video>';
+        var play = '<video src="./dist/Motion.webm" autoplay loop alt="img 01" class="playMo"></video>';
     } 
     return thumb.replace("ID", id) + play;
 }
