@@ -35,7 +35,7 @@ function transitionInit (){
                     tran = 'm';
                     fetchPage('mograph.html');
                     break;
-/*              case designPage:
+                /*case designPage:
                     tran = 'd';
                     fetchPage('design.html');
                     break; */
@@ -138,13 +138,14 @@ function transitionInit (){
                     easing:  "easeInOutQuad",    
                     duration: 2000,
                     complete: function(anim) {
-                        document.body.style.background = "linear-gradient(to top right, #FFfff, #FF769A)";
+                        document.body.style.background = "linear-gradient(to top right,#FCB69F, #FFAC99)";
                         document.body.style.backgroundAttachment = "fixed";
                         document.querySelector('.hub').remove();
                         document.querySelector('#jfganimation').remove();
                         document.querySelector('body').insertBefore(doc.querySelector('.new-content'), document.querySelector('body .hub'));
                         document.querySelector('.new-content').style.opacity = 0;
-                        InitCode();
+                        var page = 'mo';
+                        InitCode(page);
                         loadjs('./assets/js/mopage.js');
                         loadjs('./assets/js/parallax.js');
                         anime({

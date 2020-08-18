@@ -826,7 +826,7 @@ main {
   --color-menu-hover: #000;
   --grid-columns: 2;
   --details-bg-up: rgb(47, 35, 49);
-  --details-bg-down: #572F98;
+  --details-bg-down: #FFAC99;
   --color-mo-title: #fff;
   --color-mo-subtitle: #803cff;
   --color-details-title: #fff;
@@ -1217,8 +1217,8 @@ html {
   width: 100%;
   height: calc(1vw*(48/1.78));
   position: relative;
-  -webkit-box-shadow: 10px 10px 44px 3px rgba(255, 194, 255, 0.53);
-          box-shadow: 10px 10px 44px 3px rgba(255, 194, 255, 0.53);
+  -webkit-box-shadow: 0px 0px 44px 3px rgba(255, 194, 255, 0.33);
+          box-shadow: 0px 0px 44px 3px rgba(255, 194, 255, 0.33);
   border-radius: 50px;
 }
 
@@ -1232,7 +1232,7 @@ html {
 .video-player img {
   width: 100%;
   border: none;
-  border-radius: 50px;
+  border-radius: 10px;
   cursor: pointer;
   -webkit-transition: 1s all;
   transition: 1s all;
@@ -1242,7 +1242,7 @@ html {
   -webkit-filter: brightness(105%);
   -webkit-box-shadow: 0px 0px 54px 3px rgba(255, 194, 255, 0.53);
           box-shadow: 0px 0px 54px 3px rgba(255, 194, 255, 0.53);
-  border-radius: 15px;
+  border-radius: 5px;
 }
 
 @media screen and (max-width: 768px) {
@@ -1257,6 +1257,18 @@ html {
   width: 72px;
   left: 50%;
   top: 50%;
+  margin-left: -36px;
+  margin-top: -36px;
+  position: absolute;
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.video-player .playMo {
+  height: 72px;
+  width: 344px;
+  left: 34%;
+  top: 51%;
   margin-left: -36px;
   margin-top: -36px;
   position: absolute;

@@ -1,29 +1,34 @@
 /* Light YouTube Embeds by @labnol */
+var page = 'init';
 if (document.readyState !== 'loading') {
     console.log('Youtube.js logs loading state')
-    InitCode();
+    InitCode(page);
 } else {
     document.addEventListener("DOMContentLoaded", function() {
-        InitCode();
+        InitCode(page);
         console.log('Youtube.js logs DOMContentLoaded')
     });
 }
 
-function InitCode(){
-    var div, n,
-    v = document.getElementsByClassName("video-player");
+function InitCode(page){
+    var div, n, v = document.getElementsByClassName("video-player");
     for (n = 0; n < v.length; n++) {
         div = document.createElement("div");
         div.setAttribute("data-id", v[n].dataset.id);
-        div.innerHTML = labnolThumb(v[n].dataset.id);
+        div.innerHTML = labnolThumb(v[n].dataset.id, page);
         div.onclick = labnolIframe;
         v[n].appendChild(div);
     }
 };
 
-function labnolThumb(id) {
-    var thumb = '<img src="https://i.ytimg.com/vi/ID/maxresdefault.jpg" >',
-        play = '<video src="./dist/arrow.webm" autoplay loop alt="img 01" class="play"></video>';
+function labnolThumb(id, page) {
+    console.log ('page recorded is: ', page);
+    var thumb = '<img src="https://i.ytimg.com/vi/ID/maxresdefault.jpg" >';
+    if (page == 'init'){
+        play = '<video src="./dist/reel.webm" autoplay loop alt="img 01" class="playMo"></video>';
+    } else if (page == 'mo') {
+        play = '<video src="./dist/motion.webm" autoplay loop alt="img 01" class="playMo"></video>';
+    } 
     return thumb.replace("ID", id) + play;
 }
 function labnolIframe() {
