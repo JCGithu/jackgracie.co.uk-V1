@@ -1019,7 +1019,6 @@ main {
 
 @media screen and (max-width: 768px) {
   .moReel {
-    background-color: black;
     width: 80vw;
     height: 44.943vw;
   }
@@ -1252,24 +1251,12 @@ html {
   }
 }
 
-.video-player .play {
-  height: 72px;
-  width: 72px;
-  left: 50%;
-  top: 50%;
-  margin-left: -36px;
-  margin-top: -36px;
-  position: absolute;
-  opacity: 0.9;
-  cursor: pointer;
-}
-
-.video-player .playMo {
+.video-player .playMo, .video-player .play {
   height: 72px;
   width: 344px;
-  left: 34%;
-  top: 51%;
-  margin-left: -36px;
+  top: 49%;
+  left: 50%;
+  margin-left: -172px;
   margin-top: -36px;
   position: absolute;
   opacity: 0.9;

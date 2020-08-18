@@ -25,7 +25,7 @@ function labnolThumb(id, page) {
     console.log ('page recorded is: ', page);
     var thumb = '<img src="https://i.ytimg.com/vi/ID/maxresdefault.jpg" >';
     if (page == 'init'){
-        play = '<video src="./dist/reel.webm" autoplay loop alt="img 01" class="playMo"></video>';
+        play = '<video src="./dist/reel.webm" autoplay loop alt="img 01" class="play"></video>';
     } else if (page == 'mo') {
         play = '<video src="./dist/motion.webm" autoplay loop alt="img 01" class="playMo"></video>';
     } 
