@@ -27,7 +27,7 @@ function labnolThumb(id, page) {
     if (page == 'init'){
         play = '<video src="./dist/reel.webm" autoplay loop alt="img 01" class="play"></video>';
     } else if (page == 'mo') {
-        play = '<video src="./dist/motion.webm" autoplay loop alt="img 01" class="playMo"></video>';
+        play = '<video src="./dist/Motion.webm" autoplay loop alt="img 01" class="playMo"></video>';
     } 
     return thumb.replace("ID", id) + play;
 }
