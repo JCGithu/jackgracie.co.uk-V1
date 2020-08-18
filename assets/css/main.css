@@ -981,6 +981,8 @@ main {
      object-fit: cover;
   cursor: pointer;
   border: 0.2em solid rgba(255, 255, 255, 0.5);
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 @media screen and (max-width: 768px) {
@@ -988,6 +990,11 @@ main {
     width: 30vw;
     height: 30vw;
   }
+}
+
+#extra_img:hover {
+  -webkit-transform: scale(1.04) !important;
+          transform: scale(1.04) !important;
 }
 
 .moReel {

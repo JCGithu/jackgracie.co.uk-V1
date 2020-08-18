@@ -130,7 +130,7 @@
             });
         }
         close() {
-            console.log('close ran at least')
+            console.log('Closed section')
             if ( this.isAnimating ) {
                 console.log('this is going')
                 return false;
