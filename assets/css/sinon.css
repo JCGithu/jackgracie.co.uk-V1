@@ -6,6 +6,12 @@
   font-style: normal;
 }
 
+html {
+  --main-red: #fe5f55;
+  --black: #262d36;
+  --main-white: #f7f7ff;
+}
+
 body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -20,6 +26,11 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .sBox {
@@ -81,60 +92,6 @@ h1 {
   }
 }
 
-button {
-  font-family: 'Lato';
-  font-weight: bold;
-  width: 200px;
-  margin: 0.5vw;
-  background: -webkit-gradient(linear, left bottom, right top, from(#FFAC99), to(#FF769A));
-  background: linear-gradient(to top right, #FFAC99, #FF769A);
-  color: white;
-  border-color: linear-gradient(to top right, #FFAC99, #FF769A);
-  border-radius: 0.5em;
-  -webkit-transition: ease 0.2s all;
-  transition: ease 0.2s all;
-  font-size: 1.5em;
-  opacity: 0;
-  line-height: 0.5;
-  padding: .5rem 3rem;
-  color: black;
-  -webkit-box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
-          box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
-  border: solid 3px transparent;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0))), -webkit-gradient(linear, left bottom, right top, from(#FFAC99), to(#FF769A));
-  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(to top right, #FFAC99, #FF769A);
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-  -webkit-box-shadow: 2px 1000px 1px #fff inset;
-          box-shadow: 2px 1000px 1px #fff inset;
-  cursor: pointer;
-}
-
-button sub {
-  font-size: 0.5em;
-  margin: 0;
-  padding: 0;
-}
-
-button:hover {
-  background: -webkit-gradient(linear, left bottom, right top, from(#FFAC99), to(#FF769A));
-  background: linear-gradient(to top right, #FFAC99, #FF769A);
-  color: white;
-  color: linear-gradient(to top right, #FFAC99, #FF769A);
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  border-radius: 2em;
-  border: 0;
-}
-
-@media screen and (max-width: 768px) {
-  button {
-    margin: 1vh;
-  }
-}
-
 iframe {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -188,5 +145,84 @@ iframe {
   top: 10vh;
   width: auto;
   height: auto;
+}
+
+.dropbtn {
+  font-family: 'Lato';
+  font-weight: bold;
+  width: 200px;
+  margin: 0.5vw;
+  color: var(--main-red);
+  border-color: var(--main-red);
+  border-radius: 0.5em;
+  -webkit-transition: ease 0.2s transform;
+  transition: ease 0.2s transform;
+  font-size: 1.5em;
+  opacity: 0;
+  line-height: 0.5;
+  padding: 0.5rem 3rem;
+  color: var(--black);
+  border: solid 3px transparent;
+  background-color: rgba(0, 0, 0, 0);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  cursor: pointer;
+}
+
+.dropbtn sub {
+  font-size: 0.5em;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .dropbtn {
+    margin: 1vh;
+  }
+}
+
+.dropdown {
+  font-family: 'Lato';
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown:hover .dropbtn {
+  background: var(--main-red);
+  color: var(--main-white);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: solid 3px transparent;
+  border-radius: 2em;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 5px;
+  background-color: #f1f1f1;
+  width: 200px;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
 }
 /*# sourceMappingURL=sinon.css.map */
