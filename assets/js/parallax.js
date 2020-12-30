@@ -1,4 +1,3 @@
-console.log("This works")
 var content = document.getElementById("mo_content");
 var body = document.getElementById("mo_body");
 var video = document.getElementById("mo_video");
