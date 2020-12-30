@@ -1,9 +1,4 @@
-@import "./text";
-@import './lottie';
-@import './design';
-@import './pages';
-@import './video';
-@import './mo';
+@import "./text", './lottie', './design', './pages', './video', './mo';
 $breakpoint: 768px;
 
 html {
