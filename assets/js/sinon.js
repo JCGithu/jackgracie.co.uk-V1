@@ -28,7 +28,7 @@ function grabURL() {
     }
     var regex = /(?<=\/w\/)[0-9A-Za-z]+/g;
     var token = inputText.match(regex);
-    let URL = `https://https://sinon-api.herokuapp.com/periscope/${token}`;
+    let URL = `https://sinon-api.herokuapp.com/periscope/${token}`;
     fetch(URL)
       .then((data) => {
         data.json();
