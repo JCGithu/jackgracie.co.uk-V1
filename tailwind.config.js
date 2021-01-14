@@ -8,6 +8,7 @@ module.exports = {
     fontFamily: {
       display: ['Poppins', 'system-ui', 'sans-serif'],
       body: ['Poppins', 'system-ui', 'sans-serif'],
+      sunflower: ['sunflower', 'sans-serif'],
     },
     container: {
       center: true,
