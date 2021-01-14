@@ -1,8 +1,16 @@
 let failed = false;
+
 var inputText = document.getElementById('input').value;
 let finalText = document.getElementById('output');
 let finalBox = document.getElementById('outputBox');
 let copyButton = document.getElementById('copyButton');
+
+function updateValues() {
+  inputText = document.getElementById('input').value;
+  finalText = document.getElementById('output');
+  finalBox = document.getElementById('outputBox');
+  copyButton = document.getElementById('copyButton');
+}
 
 function failUndo() {
   finalBox.classList.remove('bg-red-400');
@@ -11,7 +19,6 @@ function failUndo() {
 }
 
 function fail() {
-  console.log('invalid URL');
   finalBox.classList.remove('bg-green-400');
   finalBox.classList.add('bg-red-400');
   finalText.innerHTML = 'Invalid code';
@@ -19,30 +26,27 @@ function fail() {
   failed = true;
 }
 
-function grabURL() {
+async function grabURL() {
+  updateValues();
   var inputText = document.getElementById('input').value;
   if (inputText.includes('pscp.tv')) {
-    console.log('valid URL');
     if (failed) {
       failUndo();
     }
     var regex = /(?<=\/w\/)[0-9A-Za-z]+/g;
     var token = inputText.match(regex);
     let URL = `https://sinon-api.herokuapp.com/periscope/${token}`;
-    fetch(URL)
-      .then((data) => {
-        data.json();
-      })
-      .then((json) => {
-        console.log(json);
-      });
-    //finalText.innerHTML = copyText;
+    finalText.innerHTML = 'Sourcing...';
+    var response = await fetch(URL);
+    var body = await response.json();
+    console.log(body);
+    finalText.innerHTML = body;
   } else {
     fail();
   }
-  //console.log(finalText.innerHTML);
 }
 function copy() {
+  updateValues();
   if (!failed) {
     const el = document.createElement('textarea');
     el.value = finalText.innerHTML;
