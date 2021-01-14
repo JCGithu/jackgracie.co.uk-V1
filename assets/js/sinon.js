@@ -1,4 +1,4 @@
-let fail = false;
+let failed = false;
 var inputText = document.getElementById('input').value;
 let finalText = document.getElementById('output');
 let finalBox = document.getElementById('outputBox');
@@ -16,14 +16,14 @@ function fail() {
   finalBox.classList.add('bg-red-400');
   finalText.innerHTML = 'Invalid code';
   copyButton.innerHTML = 'Cancel';
-  fail = true;
+  failed = true;
 }
 
 function grabURL() {
   var inputText = document.getElementById('input').value;
   if (inputText.includes('pscp.tv')) {
     console.log('valid URL');
-    if (fail) {
+    if (failed) {
       failUndo();
     }
     var regex = /(?<=\/w\/)[0-9A-Za-z]+/g;
@@ -44,7 +44,7 @@ function grabURL() {
   //console.log(finalText.innerHTML);
 }
 function copy() {
-  if (!fail) {
+  if (!failed) {
     const el = document.createElement('textarea');
     el.value = finalText.innerHTML;
     document.body.appendChild(el);
