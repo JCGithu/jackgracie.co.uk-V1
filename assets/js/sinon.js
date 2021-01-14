@@ -28,22 +28,13 @@ function grabURL() {
     }
     var regex = /(?<=\/w\/)[0-9A-Za-z]+/g;
     var token = inputText.match(regex);
-    let URL = `https://api.periscope.tv/api/v2/getAccessPublic?token=${token}`;
-    fetch(URL, {
-      referrer: '',
-      method: 'GET',
-      origin: '*',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      dataType: 'json',
-    })
+    let URL = `https://https://sinon-api.herokuapp.com/periscope/${token}`;
+    fetch(URL)
       .then((data) => {
         data.json();
       })
       .then((json) => {
         console.log(json);
-        console.log(json.hls_url);
       });
     //finalText.innerHTML = copyText;
   } else {
