@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sinon Web</title>
+    <link rel="stylesheet" href="./assets/css/tailwind.css" />
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <style>
+      @font-face {
+        font-family: 'sunflower';
+        src: url('/assets/webfonts/made_sunflower-webfont.ttf') format('truetype'),
+          url('/assets/webfonts/made_sunflower-webfont.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex items-center h-screen w-full bg-gray-800">
+      <div class="w-full bg-gray-700 rounded-lg shadow-lg p-8 m-4 md:max-w-screen-md md:mx-auto lg:text-center">
+        <h1 class="font-sunflower text-7xl font-normal text-white">Sinon</h1>
+        <div class="flex flex-col mb-4 md:w-full flex-shrink-0">
+          <form class="flex flex-row">
+            <input
+              class="h-16 bg-gray-100 text-grey-darker py-2 font-normal text-grey-darkest border border-gray-100 w-full px-2 outline-none text-sm text-gray-600 rounded-l"
+              type="text"
+              placeholder="Insert URL"
+              id="input"
+            />
+            <span
+              class="flex items-center bg-gray-100 rounded rounded-l-none overflow-hidden border-0 pl-3 font-bold text-grey-100"
+            >
+              <button
+                type="button"
+                x-on:click="open=true"
+                class="transition duration-500 ease-in-out object-cover bg-gray-200 hover:bg-gray-400 hover:text-white hover:text-sm text-xs text-black font-bold h-full px-6 mr-0"
+                onclick="return grabURL()"
+              >
+                Get URL
+              </button>
+            </span>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="fixed h-screen w-full flex items-center justify-center" x-show.transition.opacity.duration.700ms="open">
+      <div
+        id="outputBox"
+        class="absolute flex flex-col items-center text-center justify-center bg-green-400 z-10 w-64 h-32 rounded-lg"
+        role="alert"
+      >
+        <p id="output" class="m-5 p-2 font-bold text-xl animate-bounce"></p>
+        <button
+          id="copyButton"
+          type="button"
+          onclick="return copy()"
+          x-on:click="open=false"
+          class="w-auto bg-white text-black p-1 px-3 rounded"
+        >
+          Copy & Close
+        </button>
+      </div>
+    </div>
+    <script src="./assets/js/sinon.js"></script>
+  </body>
+</html>
