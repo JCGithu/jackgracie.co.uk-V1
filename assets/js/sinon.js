@@ -29,7 +29,15 @@ function grabURL() {
     var regex = /(?<=\/w\/)[0-9A-Za-z]+/g;
     var token = inputText.match(regex);
     let URL = `https://api.periscope.tv/api/v2/getAccessPublic?token=${token}`;
-    fetch(URL)
+    fetch(URL, {
+      referrer: '',
+      method: 'GET',
+      origin: '*',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      dataType: 'json',
+    })
       .then((data) => {
         data.json();
       })
