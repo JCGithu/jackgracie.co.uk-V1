@@ -26,6 +26,34 @@ function fail() {
   failed = true;
 }
 
+async function youtube() {
+  var regex = /(?<=\/|v\=)([^".&?\/\s]{11})/gi;
+  var token = inputText.match(regex);
+  console.log(token);
+  let URL = `https://sinon-api.herokuapp.com/youtube/${token}`;
+  console.log(URL);
+  finalText.innerHTML = 'Sourcing...';
+  var response = await fetch(URL);
+  var body = await response.json();
+  for (var obj in body) {
+    let result = body[obj];
+    console.log(result);
+    const link = document.createElement('a');
+    const el = document.createTextNode(result.text);
+    link.href = result.url;
+    link.append(el);
+    console.log(obj);
+    console.log(body.length);
+    finalBox.appendChild(link);
+    if (obj >= body.length) {
+      console.log('wow');
+      return;
+    }
+  }
+  //console.log(body);
+  //finalText.innerHTML = body;
+}
+
 async function periscope() {
   var regex = /(?<=\/w\/)[0-9A-Za-z]+/g;
   var token = inputText.match(regex);
@@ -64,6 +92,8 @@ async function grabURL() {
     await periscope();
   } else if (inputText.includes('parliamentlive.tv')) {
     await parliament();
+  } else if (inputText.includes('youtube.com') || inputText.includes('youtu.be')) {
+    await youtube();
   } else {
     fail();
   }
@@ -71,11 +101,13 @@ async function grabURL() {
 function copy() {
   updateValues();
   if (!failed) {
-    const el = document.createElement('textarea');
-    el.value = finalText.innerHTML;
-    document.body.appendChild(el);
-    el.select();
-    document.execCommand('copy');
-    document.body.removeChild(el);
+    if (finalText.innerHTML !== 'Sourcing...') {
+      const el = document.createElement('textarea');
+      el.value = finalText.innerHTML;
+      document.body.appendChild(el);
+      el.select();
+      document.execCommand('copy');
+      document.body.removeChild(el);
+    }
   }
 }
