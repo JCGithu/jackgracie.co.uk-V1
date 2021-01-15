@@ -26,21 +26,39 @@ function fail() {
   failed = true;
 }
 
+async function periscope() {
+  var regex = /(?<=\/w\/)[0-9A-Za-z]+/g;
+  var token = inputText.match(regex);
+  let URL = `https://sinon-api.herokuapp.com/periscope/${token}`;
+  finalText.innerHTML = 'Sourcing...';
+  var response = await fetch(URL);
+  var body = await response.json();
+  console.log(body);
+  finalText.innerHTML = body;
+}
+
+async function parliament() {
+  var regex = /[0-9A-Za-z]+-[0-9A-Za-z]+-[0-9A-Za-z]+-[0-9A-Za-z]+-[0-9A-Za-z]+/g;
+  var token = inputText.match(regex)[0];
+  console.log(token);
+  let URL = `http://videoplayback.parliamentlive.tv/Player/Live/${token}`;
+  finalText.innerHTML = 'Sourcing...';
+  var response = await fetch(URL);
+  var body = await response.json();
+  console.log(body);
+  finalText.innerHTML = body;
+}
+
 async function grabURL() {
   updateValues();
   var inputText = document.getElementById('input').value;
+  if (failed) {
+    failUndo();
+  }
   if (inputText.includes('pscp.tv')) {
-    if (failed) {
-      failUndo();
-    }
-    var regex = /(?<=\/w\/)[0-9A-Za-z]+/g;
-    var token = inputText.match(regex);
-    let URL = `https://sinon-api.herokuapp.com/periscope/${token}`;
-    finalText.innerHTML = 'Sourcing...';
-    var response = await fetch(URL);
-    var body = await response.json();
-    console.log(body);
-    finalText.innerHTML = body;
+    await periscope();
+  } else if (inputText.includes('parliamentlive.tv')) {
+    await parliament();
   } else {
     fail();
   }
