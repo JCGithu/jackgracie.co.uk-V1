@@ -29,6 +29,11 @@ function fail() {
 async function periscope() {
   var regex = /(?<=\/w\/)[0-9A-Za-z]+/g;
   var token = inputText.match(regex);
+  if (token == null) {
+    regex = /(?<=\/)[0-9A-Za-z]{13}(?![\/_\.])/g;
+  } else {
+    token = inputText.match(regex);
+  }
   let URL = `https://sinon-api.herokuapp.com/periscope/${token}`;
   finalText.innerHTML = 'Sourcing...';
   var response = await fetch(URL);
