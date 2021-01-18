@@ -34,9 +34,9 @@
             >
               <button
                 type="button"
+                id = 'run'
                 x-on:click="open=true; console.log(open)"
                 class="transition duration-500 ease-in-out object-cover bg-gray-200 hover:bg-gray-400 hover:text-white hover:text-sm text-xs text-black font-bold h-full px-6 mr-0"
-                onclick="return grabURL()"
               >
                 Get URL
               </button>
@@ -70,27 +70,17 @@
       </div>
     </div>
     <div
-      class="absolute z-10 top-0 h-screen w-full flex items-center justify-center"
+      class="absolute pointer-events-none z-10 top-0 h-screen w-full flex items-center justify-center"
       x-show.transition.opacity.duration.700ms="open"
     >
       <div
-        id="outputBox"
-        class="absolute flex flex-col items-center text-center justify-center bg-green-400 z-10 min-w-64 max-w-lg h-100 rounded-lg"
+        id="output"
+        class="absolute shadow-lg pointer-events-auto flex flex-col items-center text-center justify-center bg-blue-400 z-10 min-w-64 w-96 max-w-lg h-100 rounded-lg"
       >
-        <p id="output" class="relative m-5 p-2 text-sm break-all max-w-100"></p>
-        <button
-          id="copyButton"
-          type="button"
-          onclick="return copy()"
-          x-on:click="open=false"
-          class="w-auto bg-white text-black p-1 px-3 rounded mb-4 mx-8"
-        >
-          Copy & Close
-        </button>
       </div>
     </div>
     <div class="bg-green-400"></div>
     <div class="bg-red-400"></div>
-    <script src="./assets/js/sinon.js"></script>
+    <script src="./assets/js/sinon/sinon.js"></script>
   </body>
 </html>

@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:css": "postcss ./assets/css/tailwind.css -o ./assets/css/idparse.css --config ./postcss.config.js"
+    "build:css": "postcss ./assets/css/tailwindFull.css -o ./assets/css/tailwind.css --config ./postcss.config.js",
+    "build:sinon": "browserify -p tinyify ./assets/nodejs/sinon/sinon.js -o ./assets/js/sinon/sinon.js",
+    "test:sinon": "browserify ./assets/nodejs/sinon/sinon.js -o ./assets/js/sinon/sinon.js"
   },
   "repository": {
     "type": "git",
@@ -22,5 +24,10 @@
     "postcss": "^8.1.14",
     "postcss-cli": "^8.3.1",
     "tailwindcss": "^2.0.2"
+  },
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "tinyify": "^3.0.0",
+    "watchify": "^3.11.1"
   }
 }
