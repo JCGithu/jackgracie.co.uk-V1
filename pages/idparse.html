@@ -9,7 +9,6 @@
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
   </head>
   <body>
-    <script src='./assets/js/idparse.js'></script>
     <div class="flex items-center h-screen w-full bg-gray-900" x-data="{ open: false }">
       <div class="w-full bg-white rounded-md shadow-lg p-8 m-4 md:max-w-screen-md md:mx-auto lg:text-center">
         <h1 class="mt-2 text-2xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">Hello!</h1>
@@ -28,7 +27,7 @@
               type="text" placeholder="Video code?" id='input'>
             <span
               class="flex items-center bg-gray-100 rounded rounded-l-none border-0 px-3 font-bold text-grey-100">
-              <button type="button" x-on:click='open=true'class="bg-gredient-dark hover:bg-gredient-light text-xs text-black font-bold py-3 px-6 rounded" onclick="return grabID()">
+              <button id='run' type="button" x-on:click='open=true'class="bg-gredient-dark hover:bg-gredient-light text-xs text-black font-bold py-3 px-6 rounded">
                 Get ID
               </button>
             </span>
@@ -41,5 +40,6 @@
         <button id='copyButton' type="button" onclick="return copy()" x-on:click='open=false' class="w-auto bg-white text-black p-1 px-3 rounded">Copy & Close</button>
       </div>
     </div>
+    <script src='../assets/js/idparse.js'></script>
   </body>
 </html>

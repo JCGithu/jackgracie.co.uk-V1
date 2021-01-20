@@ -32,3 +32,8 @@ function copy() {
     document.body.removeChild(el);
   }
 }
+
+let run = document.getElementById('run');
+run.addEventListener('click', () => {
+  grabID();
+});
