@@ -50,7 +50,6 @@ async function gate(inputText) {
 }
 
 async function callAPI(dom) {
-  loading(dom);
   let site = await gate(dom.inputText);
   if (!site) {
     return false;
