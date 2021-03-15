@@ -6,27 +6,55 @@
     <meta name="viewport" content="width=], initial-scale=1.0" />
     <link rel="shortcut icon" href="./dist/favicon.ico" />
     <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/tailwind.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
     <title>Notion Clock</title>
   </head>
-  <body style="background-color: #2f3437">
-    <a
-      href="https://time.is/Newmarket,_England"
-      id="time_is_link"
-      rel="nofollow"
-      style="font-size: 30px; font-weight: bold; color: #ffffff"
-      >Time:</a
-    >
-    <span id="Newmarket__England_z716" style="font-size: 30px; color: #ffffff"></span>
-
-    <script src="//widget.time.is/en.js"></script>
+  <body style="background-color: #2f3437; font-family: Poppins" class="px-2 text-white leading-none">
     <script>
-      time_is_widget.init({
-        Newmarket__England_z716: {
-          template: 'TIME<br>DATE',
-          time_format: '12hours:minutesAMPM',
-          date_format: 'dayname, monthname dnum, year',
-        },
-      });
+      let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+      var months = [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December',
+      ];
+      window.onload = displayClock();
+      function formatAMPM(date) {
+        var hours = date.getHours();
+        var minutes = date.getMinutes();
+        var ampm = hours >= 12 ? 'PM' : 'AM';
+        hours = hours % 12;
+        hours = hours ? hours : 12; // the hour '0' should be '12'
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        var strTime = hours + ':' + minutes + ' ' + ampm;
+        return strTime;
+      }
+      function uptimeNowClock() {
+        let timeNow = new Date();
+        var time = formatAMPM(timeNow);
+        let day = timeNow.getDay();
+        let month = timeNow.getMonth();
+        var year = timeNow.getFullYear();
+        let source = document.getElementById('time');
+        source.innerHTML = `<span class='text-2xl font-bold tracking-wide'>${time}</span><br><span class='text-sm font-regular'>${days[day]}, ${months[month]}, ${year} </span>`;
+        setTimeout(uptimeNowClock, 1000);
+      }
+      function displayClock() {
+        let timeDiv = document.createElement('div');
+        timeDiv.id = 'time';
+        document.body.appendChild(timeDiv);
+        uptimeNowClock();
+      }
     </script>
   </body>
 </html>
