@@ -62,7 +62,9 @@ function uptimeNowClock() {
   let month = timeNow.getMonth();
   var year = timeNow.getFullYear();
   let source = document.getElementById('time');
-  source.innerHTML = `<span class='text-2xl font-bold tracking-wide'>${time}</span><br><span class='text-sm font-regular'>${days[day]}, ${mDay} ${months[month]}, ${year} </span>`;
+  source.innerHTML = `<span class='text-2xl font-bold tracking-wide'>${time}</span><br><span class='text-sm font-regular'>${
+    days[day - 1]
+  }, ${mDay} ${months[month]}, ${year} </span>`;
   setTimeout(uptimeNowClock, 1000);
 }
 function displayClock() {
