@@ -67,7 +67,11 @@ function uptimeNowClock() {
 }
 function displayClock() {
   let timeDiv = document.createElement('div');
-  timeDiv.id = 'time';
+  timeDiv.classList.add('w-full', 'flex', 'text-left', 'justify-start');
+  timeDiv.id = 'timeDiv';
+  let spanSet = document.createElement('span');
+  spanSet.id = 'time';
+  timeDiv.appendChild(spanSet);
   document.body.appendChild(timeDiv);
   uptimeNowClock();
 }
@@ -83,5 +87,18 @@ setTimeout(function () {
   }
   if (urlParams.texthex) {
     document.body.style.color = `#${urlParams.texthex}`;
+  }
+  if (urlParams.align) {
+    let timeDiv = document.getElementById('timeDiv');
+    if (urlParams.align != 'left') {
+      timeDiv.classList.remove('text-left', 'justify-start');
+    }
+
+    if (urlParams.align == 'right') {
+      timeDiv.classList.add('text-right', 'justify-end');
+    }
+    if (urlParams.align == 'center') {
+      timeDiv.classList.add('text-center', 'justify-center');
+    }
   }
 }, 1000);
