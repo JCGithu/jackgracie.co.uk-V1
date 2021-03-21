@@ -1,26 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 @font-face {
-  font-family: 'sunflower';
+  font-family: "sunflower";
   src: url("/assets/webfonts/made_sunflower-webfont.ttf") format("truetype"), url("/assets/webfonts/made_sunflower-webfont.svg") format("svg");
   font-weight: normal;
   font-style: normal;
 }
-
-html {
-  --main-red: #fe5f55;
-  --black: #262d36;
-  --main-white: #f7f7ff;
-}
-
 body {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-content: center;
+  justify-content: center;
   background: white;
   background: radial-gradient(circle, white 0%, #d5d8d8 100%);
   margin: 0;
@@ -34,18 +24,10 @@ a {
 }
 
 .sBox {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  justify-content: center;
   width: 30vw;
   height: 100vh;
 }
@@ -57,8 +39,7 @@ a {
   width: 100%;
   overflow: hidden;
   line-height: 0;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .backdrop svg {
@@ -73,7 +54,7 @@ a {
 }
 
 h1 {
-  font-family: 'sunflower', serif;
+  font-family: "sunflower", serif;
   color: #000;
   font-size: 8em;
   position: relative;
@@ -82,7 +63,6 @@ h1 {
   text-align: center;
   text-shadow: 0px 0px 35px white;
 }
-
 @media screen and (max-width: 768px) {
   h1 {
     font-size: 10vh;
@@ -93,15 +73,12 @@ h1 {
 }
 
 iframe {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   margin: 1vw;
   width: 356px;
   height: 200px;
   opacity: 0;
 }
-
 @media screen and (max-width: 768px) {
   iframe {
     width: 35.6vh;
@@ -125,19 +102,15 @@ iframe {
   position: flex;
   z-index: 2;
   cursor: pointer;
-  -webkit-transition: ease-in-out 0.3s all;
   transition: ease-in-out 0.3s all;
 }
-
 .icon:hover {
-  background: white;
+  background: #f7f7ff;
   border-radius: 100rem;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  transform: scale(1.2);
   padding: 1em;
   margin-top: -1em;
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.3);
-          box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.3);
 }
 
 .nav {
@@ -148,33 +121,30 @@ iframe {
 }
 
 .dropbtn {
-  font-family: 'Lato';
+  font-family: "Lato";
   font-weight: bold;
   width: 200px;
   margin: 0.5vw;
-  color: var(--main-red);
-  border-color: var(--main-red);
+  color: #fe5f55;
+  border-color: #fe5f55;
   border-radius: 0.5em;
-  -webkit-transition: ease 0.2s transform;
   transition: ease 0.2s transform;
   font-size: 1.5em;
   opacity: 0;
   line-height: 0.5;
   padding: 0.5rem 3rem;
-  color: var(--black);
+  color: #262d36;
   border: solid 3px transparent;
   background-color: rgba(0, 0, 0, 0);
   background-origin: border-box;
   background-clip: content-box, border-box;
   cursor: pointer;
 }
-
 .dropbtn sub {
   font-size: 0.5em;
   margin: 0;
   padding: 0;
 }
-
 @media screen and (max-width: 768px) {
   .dropbtn {
     margin: 1vh;
@@ -182,22 +152,18 @@ iframe {
 }
 
 .dropdown {
-  font-family: 'Lato';
+  font-family: "Lato";
   position: relative;
   display: inline-block;
 }
-
 .dropdown:hover .dropbtn {
-  background: var(--main-red);
-  color: var(--main-white);
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  background: #fe5f55;
+  color: #f7f7ff;
+  transform: scale(1.1);
+  box-shadow: none;
   border: solid 3px transparent;
   border-radius: 2em;
 }
-
 .dropdown:hover .dropdown-content {
   display: block;
 }
@@ -207,22 +173,20 @@ iframe {
   display: none;
   position: absolute;
   left: 5px;
-  background-color: #f1f1f1;
+  background-color: #f7f7ff;
   width: 200px;
-  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
-
 .dropdown-content a {
-  color: black;
+  color: #262d36;
   padding: 12px 16px;
   text-decoration: none;
   text-align: center;
   display: block;
 }
-
 .dropdown-content a:hover {
   background-color: #ddd;
 }
+
 /*# sourceMappingURL=sinon.css.map */

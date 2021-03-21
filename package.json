@@ -4,12 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:css": "postcss ./assets/css/tailwindFull.css -o ./assets/css/tailwind.css --config ./configs/postcss.config.js",
-    "build:css": "postcss ./assets/css/tailwindFull.css -o ./assets/css/tailwind.css --config ./configs/pcssProd.config.js",
-    "test:sinon": "browserify ./assets/nodejs/sinon/sinon.js -o ./assets/js/sinon/sinon.js",
+    "css": "postcss ./configs/tailwindFull.css -o ./assets/css/tailwind.css --config ./configs/postcss.config.js",
+    "dev:sinon": "browserify ./assets/nodejs/sinon/sinon.js -o ./assets/js/sinon/sinon.js",
     "build:sinon": "browserify -p tinyify ./assets/nodejs/sinon/sinon.js -o ./assets/js/sinon/sinon.js",
-    "test": "npm run test:css && npm run test:sinon",
-    "build": "npm run build:css && npm run build:sinon"
+    "dev": "set NODE_ENV=development&&npm run css && npm run dev:sinon",
+    "build": "set NODE_ENV=production&& npm run css && npm run build:sinon"
   },
   "repository": {
     "type": "git",

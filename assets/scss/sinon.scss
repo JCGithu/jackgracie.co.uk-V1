@@ -1,17 +1,4 @@
-@font-face {
-  font-family: 'sunflower';
-  src: url('/assets/webfonts/made_sunflower-webfont.ttf') format('truetype'),
-    url('/assets/webfonts/made_sunflower-webfont.svg') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-
-html {
-  --main-red: #fe5f55;
-  --black: #262d36;
-  --main-white: #f7f7ff;
-}
+@use '../scss/' as *;
 
 body {
   display: flex;
@@ -106,7 +93,7 @@ iframe {
   cursor: pointer;
   transition: ease-in-out 0.3s all;
   &:hover {
-    background: white;
+    background: $sinon-white;
     border-radius: 100rem;
     transform: scale(1.2);
     padding: 1em;
@@ -127,15 +114,15 @@ iframe {
   font-weight: bold;
   width: 200px;
   margin: 0.5vw;
-  color: var(--main-red);
-  border-color: var(--main-red);
+  color: $sinon-red;
+  border-color: $sinon-red;
   border-radius: 0.5em;
   transition: ease 0.2s transform;
   font-size: 1.5em;
   opacity: 0;
   line-height: 0.5;
   padding: 0.5rem 3rem;
-  color: var(--black);
+  color: $sinon-black;
   border: solid 3px transparent;
   background-color: rgba(0, 0, 0, 0);
   background-origin: border-box;
@@ -157,8 +144,8 @@ iframe {
   display: inline-block;
   &:hover {
     .dropbtn {
-      background: var(--main-red);
-      color: var(--main-white);
+      background: $sinon-red;
+      color: $sinon-white;
       transform: scale(1.1);
       box-shadow: none;
       border: solid 3px transparent;
@@ -175,12 +162,12 @@ iframe {
   display: none;
   position: absolute;
   left: 5px;
-  background-color: #f1f1f1;
+  background-color: $sinon-white;
   width: 200px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   a {
-    color: black;
+    color: $sinon-black;
     padding: 12px 16px;
     text-decoration: none;
     text-align: center;

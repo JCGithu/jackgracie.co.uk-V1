@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sinon</title>
-    <link rel="stylesheet" href="./assets/css/tailwind.css" />
+    <link rel="stylesheet" href="./assets/css/tailwind.css"/>
     <link rel="shortcut icon" href="./dist/favicon.ico" />
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <style>
@@ -43,21 +43,24 @@
             </span>
           </form>
         </div>
-        <div class='justify-center text-center flex items-start justify-items-center rounded overflow-hidden' x-data="{mac: false, linux: false}">
-          <div class="focus:outline-none rounded-l w-40 cursor-pointer text-gray-700 hover:text-black flex-col p-2 pl-3 pr-1 bg-gray-100">
-            <a href='https://github.com/JCGithu/Sinon/releases/download/v.1.3.2/Sinon.Setup.1.3.2.exe'>
-              <button class='dropbtn'>Windows</style></button>
-            </a>
+        <div class='justify-center text-center flex items-start justify-items-center rounded overflow-hidden' x-data="{win: false, mac: false, linux: false}" >
+          <div class="focus:outline-none rounded-l w-40 cursor-pointer text-gray-700 hover:text-black flex-col p-2 pl-3 pr-1 bg-gray-100" @click="win = !win">
+            <button >Windows</button>
+            <div class="py-1 flex-col" x-show='win'> 
+              <ul>
+                <li><a href='https://github.com/JCGithu/Sinon/releases/download/v.1.3.2/Sinon.Setup.1.3.2.exe'>Version 1.3.2</a></li>
+              </ul>
+            </div>
           </div>
-        <div class="focus:outline-none w-40 cursor-pointer text-gray-700 flex-col p-2 pl-3 pr-1 bg-gray-100" @click="mac = !mac">
-          <button>Mac</button>
-          <div class="py-1 flex-col" x-show="mac">
-            <ul>
-              <li><a href="https://github.com/JCGithu/Sinon/releases/download/v.1.3.2/Sinon-1.3.2-mac.zip" class ='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900'>Latest OS</a></li>
-              <li><a href="https://github.com/JCGithu/Sinon/releases/download/v.1.3.2/Sinon-1.3.2-mac-Legacy.zip" class ='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900'>10.15 & later</a></li>
-            </ul>
-          </div> 
-        </div>
+          <div class="focus:outline-none w-40 cursor-pointer text-gray-700 flex-col p-2 pl-3 pr-1 bg-gray-100" @click="mac = !mac">
+            <button>Mac</button>
+            <div class="py-1 flex-col" x-show="mac">
+              <ul>
+                <li><a href="https://github.com/JCGithu/Sinon/releases/download/v.1.3.2/Sinon-1.3.2-mac.zip" class ='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900'>Latest OS</a></li>
+                <li><a href="https://github.com/JCGithu/Sinon/releases/download/v.1.3.2/Sinon-1.3.2-mac-Legacy.zip" class ='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900'>10.15 & later</a></li>
+              </ul>
+            </div> 
+          </div>
         <div class="focus:outline-none w-40 rounded-r cursor-pointer text-gray-700 flex-col p-2 pl-3 pr-1 bg-gray-100" @click="linux = !linux">
           <button>Linux</button>
           <div class="py-1 flex-col" x-show="linux">
@@ -80,7 +83,7 @@
       >
       </div>
     </div>
-    <div id='extraClasses' class="invisible w-auto bg-green-400 bg-white m-3 p-3 px-3 py-4 px-5 mx-4 "></div>
+    <div id='extraClasses' class="invisible w-auto bg-green-400 bg-red-400 bg-white m-3 p-3 px-3 py-4 px-5 mx-4 "></div>
     <script src="./assets/js/sinon/sinon.js"></script>
   </body>
 </html>

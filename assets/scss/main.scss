@@ -1,4 +1,6 @@
+@use '../scss/' as *;
 @import './text', './design', './pages', './video', './mo';
+
 $breakpoint: 768px;
 
 html {
@@ -71,4 +73,14 @@ html {
       font-size: 15pt;
     }
   }
+}
+
+.notion-clock {
+  background-color: $notion-black;
+  color: white;
+  font-family: 'Poppins', serif;
+  line-height: 1;
+  overflow: hidden;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }

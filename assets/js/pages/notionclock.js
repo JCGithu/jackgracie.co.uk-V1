@@ -1,4 +1,4 @@
-const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 const months = [
   'January',
   'February',
@@ -13,6 +13,8 @@ const months = [
   'November',
   'December',
 ];
+
+let clock24 = false;
 
 function ordinal_suffix_of(i) {
   var j = i % 10,
@@ -54,17 +56,20 @@ function formatAMPM(date) {
   return strTime;
 }
 function uptimeNowClock() {
-  //console.log(urlParams);
   let timeNow = new Date();
   var time = formatAMPM(timeNow);
+  if (clock24) {
+    time = `${timeNow.getHours().toLocaleString('en-GB', {
+      minimumIntegerDigits: 2,
+      useGrouping: false,
+    })}:${timeNow.getMinutes().toLocaleString('en-GB', { minimumIntegerDigits: 2, useGrouping: false })}`;
+  }
   let day = timeNow.getDay();
   let mDay = ordinal_suffix_of(timeNow.getDate());
   let month = timeNow.getMonth();
   var year = timeNow.getFullYear();
   let source = document.getElementById('time');
-  source.innerHTML = `<span class='text-2xl font-bold tracking-wide'>${time}</span><br><span class='text-sm font-regular'>${
-    days[day - 1]
-  }, ${mDay} ${months[month]}, ${year} </span>`;
+  source.innerHTML = `<span class='text-2xl font-bold tracking-wide'>${time}</span><br><span class='text-sm font-regular'>${days[day]}, ${mDay} ${months[month]}, ${year} </span>`;
   setTimeout(uptimeNowClock, 1000);
 }
 function displayClock() {
@@ -78,6 +83,11 @@ function displayClock() {
   uptimeNowClock();
 }
 setTimeout(function () {
+  if (urlParams.format) {
+    if (urlParams.format == 24) {
+      clock24 = true;
+    }
+  }
   if (urlParams.bg) {
     document.body.style.backgroundColor = urlParams.bg;
   }
